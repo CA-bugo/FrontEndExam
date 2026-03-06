@@ -1,13 +1,15 @@
 const content=document.querySelector("#content");
 const submit=document.querySelector("#add");
 
-//POST API
+//add event listener to submit button
+
 submit.addEventListener('click',()=>{
-    let fname=document.querySelector("#fname").value;
-    let lname=document.querySelector("#lname").value;
+    let fullName=document.querySelector("#fullName").value;
+    let course=document.querySelector("#course").value;
+    let yearLevel=document.querySelector("#yearLevel").value;
     let email=document.querySelector("#email").value;
-    let gender=document.querySelector("#gender").value;
-    let formData={fname,lname,email,gender};
+    let dateEnrolled=document.querySelector("#dateEnrolled").value;
+    let formData={fullName,course,yearLevel,email,dateEnrolled};
 
     fetch("http://localhost:7000/api/users",{
         method:'POST',
@@ -38,7 +40,15 @@ function getUsers(){
     .then(data=>{
         console.log(data);
         data.forEach(element=>{
-            html+=`<li> ${element.first_name} ${element.last_name}</li>`
+            html+=`<li>
+                <div class="student-info">
+                    <span><span class="label">Full Name:</span> ${element.fullName}</span>
+                    <span><span class="label">Course:</span> ${element.course}</span>
+                    <span><span class="label">Year Level:</span> ${element.yearLevel}</span>
+                    <span><span class="label">Email:</span> ${element.email}</span>
+                    <span><span class="label">Date Enrolled:</span> ${element.dateEnrolled}</span>
+                </div>
+            </li>`
         })
 
         content.innerHTML=html;
