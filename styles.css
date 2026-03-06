@@ -1,6 +1,6 @@
-/* General Page Styling */
+
 body {
-    background-color: #f8f9fa; /* Off-white for better contrast */
+    background-color: #f8f9fa; 
     color: #333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -10,16 +10,16 @@ body {
     padding: 20px;
 }
 
-/* Header Styling */
+
 h1 {
-    color: #800000; /* MSEUF Maroon */
+    color: #800000; 
     text-transform: uppercase;
-    border-bottom: 3px solid #FFD700; /* Gold accent line */
+    border-bottom: 3px solid #FFD700; 
     padding-bottom: 10px;
     margin-bottom: 30px;
 }
 
-/* Form Container */
+
 #container {
     background-color: #800000;
     padding: 30px;
@@ -34,7 +34,7 @@ h1 {
     flex-direction: column;
 }
 
-/* Label Styling */
+
 label {
     color: #ffffff;
     font-weight: bold;
@@ -42,7 +42,7 @@ label {
     font-size: 14px;
 }
 
-/* Input Fields */
+
 input[type="text"], 
 input[type="date"] {
     padding: 12px;
@@ -54,10 +54,10 @@ input[type="date"] {
 
 input:focus {
     outline: none;
-    border: 2px solid #FFD700; /* Gold focus border */
+    border: 2px solid #FFD700; 
 }
 
-/* Add Button Styling */
+
 #add {
     background-color: #ffffff;
     color: #800000;
@@ -72,7 +72,7 @@ input:focus {
 }
 
 #add:hover {
-    background-color: #FFD700; /* Gold hover effect */
+    background-color: #FFD700;
     color: #800000;
     transform: translateY(-2px);
 }
@@ -88,9 +88,34 @@ input:focus {
 
 #content li {
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 15px;
     border-left: 5px solid #800000;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.student-info span {
+    font-size: 14px;
+    color: #333;
+}
+
+.student-info .label {
+    font-weight: bold;
+    color: #800000;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.student-info .value {
+    color: #555;
 }
