@@ -1,0 +1,8 @@
+#container {
+  display: flex;
+}
+
+#form {
+  padding-right: 5rem;
+  display: inline;
+}
